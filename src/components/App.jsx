@@ -35,7 +35,7 @@ const year = [2025];
     setCounter((c)=>c+step);
   }
   function counterPrevious(){
-      setCounter((c)=>c-step);
+      setCounter((c)=>Math.max(0, c - step));
   }
 
   return (
