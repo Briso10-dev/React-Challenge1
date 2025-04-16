@@ -22,7 +22,7 @@ const year = [2025];
    const currentMonth = months[Math.floor(counter / days.length) % months.length];
    const currentYear = year[0]; // you could also do logic for dynamic year growth
 
-   const date = `Today is ${currentWeekDay} ${currentDay} ${currentMonth} ${currentYear}`;
+   const date = `Today is ${currentWeekDay} ${currentDay} ${currentMonth} ${currentYear}.`;
 
   //function for incrementaton
   function stepNext(){
@@ -39,13 +39,13 @@ const year = [2025];
   }
 
   return (
-    <div className="bg-blue-400 h-screen flex flex-col items-center gap-4 p-4">
-      <div className="flex justify-center items-center bg-green-400 text-[2rem] w-[25%] h-[15%] text-center">
+    <div className="h-screen flex flex-col items-center gap-4 p-4">
+      <div className="flex justify-center items-center gap-2 text-[2rem] w-[25%] h-[15%] text-center">
         <Button label="-" click={stepPrevious}/>
         <p>Step : {step}  </p>
         <Button label="+" click={stepNext}/>
       </div>
-      <div className="flex justify-center items-center bg-red-400 text-[2rem] w-[25%] h-[15%] p-2 text-center">
+      <div className="flex justify-center items-center gap-2 text-[2rem] w-[25%] h-[15%] p-2 text-center">
         <hr />
         <Button label="-" click={counterPrevious}/>
         <p>Count : {counter} </p>
