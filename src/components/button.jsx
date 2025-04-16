@@ -7,7 +7,6 @@ export default function Button({ label,click}){
         onClick={click}
         >
          {label}
-         
         </button>
       );
 }
