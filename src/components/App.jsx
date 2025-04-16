@@ -32,10 +32,10 @@ const year = [2025];
     setStep((s)=>s-1)
   }
   function counterNext(){
-    setCounter((c)=>c+1);
+    setCounter((c)=>c+step);
   }
   function counterPrevious(){
-      setCounter((c)=>c-1);
+      setCounter((c)=>c-step);
   }
 
   return (
