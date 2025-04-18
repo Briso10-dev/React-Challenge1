@@ -2,27 +2,13 @@ import Button from "./button"
 import { useState } from "react"
 
 function App() {
-  //An array of days :
-  const days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-                21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
-  //An array of week :
-  const week = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
-  //An array of months :
-  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
-const year = [2025];
 
   //usestate variables
   const [step,setStep] = useState(1);
   const [counter,setCounter] = useState(0);
   
-
-   // Derived current "virtual date"
-   const currentDay = days[counter % days.length];
-   const currentWeekDay = week[counter % week.length];
-   const currentMonth = months[Math.floor(counter / days.length) % months.length];
-   const currentYear = year[0]; // you could also do logic for dynamic year growth
-
-   const date = `Today is ${currentWeekDay} ${currentDay} ${currentMonth} ${currentYear}.`;
+  const date = new Date ("18 April 2025");
+  date.setDate(date.getDate() + counter)
 
   //function for incrementaton
   function stepNext(){
@@ -52,7 +38,15 @@ const year = [2025];
         <Button label="+" click={counterNext}/>
         <hr />
       </div>
-        <p className="text-[2rem]"> {date} </p>
+        <p className="text-[2rem]"> 
+          <span>
+          {counter === 0
+            ? "Today is "
+            : counter > 0
+            ? `${counter} days from today is `
+            : `${counter} days ago was `}
+          </span>
+          <span>{date.toDateString()}</span> </p>
       </div>
   )
 }
