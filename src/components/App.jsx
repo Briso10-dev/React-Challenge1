@@ -32,7 +32,7 @@ function App() {
         min="0" 
         max="10" 
         value={step} 
-        onChange={e=>setStep(e.target.value)}
+        onChange={e=>setStep(NUmber(e.target.value))}
         />
         <p>Step : {step}  </p>
       </div>
