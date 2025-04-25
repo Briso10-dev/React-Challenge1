@@ -37,7 +37,7 @@ function App() {
         min="0" 
         max="10" 
         value={step} 
-        onChange={e=>setStep(NUmber(e.target.value))}
+        onChange={e=>setStep(Number(e.target.value))}
         />
         <p>Step : {step}  </p>
       </div>
@@ -62,9 +62,9 @@ function App() {
           <span>{date.toDateString()}</span> 
         </p>
         
-        <div>
+        {(counter !==0 || step!==1) ? <div>
           <button onClick={handleReset}>Reset</button>
-        </div>
+        </div> : null}
 
       </div>
   )
