@@ -36,12 +36,15 @@ function App() {
         />
         <p>Step : {step}  </p>
       </div>
+
       <div className="flex justify-center items-center gap-2 text-[2rem] w-[25%] h-[15%] p-2 text-center">
-        <hr />
         <Button label="-" click={counterPrevious}/>
-        <p>Count : {counter} </p>
+        <input type="text" 
+               value={counter} 
+               onChange={e=>setCounter(Number(e.target.value))} 
+               />
         <Button label="+" click={counterNext}/>
-        <hr />
+       
       </div>
         <p className="text-[2rem]"> 
           <span>
