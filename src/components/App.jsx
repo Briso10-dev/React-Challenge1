@@ -57,7 +57,7 @@ function App() {
         </p>
         
         {(counter !==0 || step!==1) ? <div>
-          <button onClick={handleReset}>Reset</button>
+          <Button label="Reset" onClick={handleReset}/>
         </div> : null}
 
       </div>
