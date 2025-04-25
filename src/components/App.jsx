@@ -40,8 +40,9 @@ function App() {
         <Button label="-" click={counterPrevious}/>
         <input type="text" 
                value={counter} 
-               onChange={e=>setCounter(Number(e.target.value))} 
-               />
+               onChange={e=>setCounter(Number(e.target.value))}
+               className="border-s-4 rounded-[1rem] h-[4rem] bg-gray-400 text-center focus:outline-none" 
+        />
         <Button label="+" click={counterNext}/>
        
       </div>
