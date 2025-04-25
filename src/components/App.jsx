@@ -11,12 +11,6 @@ function App() {
   date.setDate(date.getDate() + counter)
 
   //function for incrementaton
-  function stepNext(){
-      setStep((s)=>s+1);
-  }
-  function stepPrevious(){
-    setStep((s)=>s-1)
-  }
   function counterNext(){
     setCounter((c)=>c+step);
   }
