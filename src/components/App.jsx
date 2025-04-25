@@ -27,6 +27,9 @@ function App() {
   return (
     <div className="h-screen flex flex-col items-center gap-4 p-4">
       <div className="flex justify-center items-center gap-2 text-[2rem] w-[25%] h-[15%] text-center">
+        
+        <input type="range" min="0" max="10" />
+
         <Button label="-" click={stepPrevious}/>
         <p>Step : {step}  </p>
         <Button label="+" click={stepNext}/>
