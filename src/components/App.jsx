@@ -23,6 +23,11 @@ function App() {
   function counterPrevious(){
       setCounter((c)=>Math.max(0, c - step));
   }
+  function handleReset(){
+    setCounter(0);
+    setStep(1);
+  }
+
 
   return (
     <div className="h-screen flex flex-col items-center gap-4 p-4">
@@ -54,7 +59,13 @@ function App() {
             ? `${counter} days from today is `
             : `${counter} days ago was `}
           </span>
-          <span>{date.toDateString()}</span> </p>
+          <span>{date.toDateString()}</span> 
+        </p>
+        
+        <div>
+          <button onClick={handleReset}>Reset</button>
+        </div>
+
       </div>
   )
 }
