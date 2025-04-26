@@ -66,8 +66,6 @@ Try extending this project by:
 - Animating the date change.
 - Adding tests for your components.
 
----
-
 **Happy Coding!** 🚀
 
 ---
