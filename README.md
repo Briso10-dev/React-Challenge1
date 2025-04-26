@@ -71,5 +71,3 @@ Try extending this project by:
 **Happy Coding!** 🚀
 
 ---
-
-> _Inspired by a Udemy React course challenge. Project by Briso10._
